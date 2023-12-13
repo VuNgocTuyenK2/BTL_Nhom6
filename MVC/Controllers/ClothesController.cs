@@ -173,6 +173,9 @@ namespace MVC.Controllers
         /// Export excel
         /// </summary>
         /// <returns></returns>
+        
+
+        //Vu Ngoc Tuyen 2021050715
         public async Task<IActionResult> ExportToExcel()
         {
             // Lấy danh sách sinh viên từ cơ sở dữ liệu
@@ -187,6 +190,7 @@ namespace MVC.Controllers
                 Status = clothes.Status
             })
             .ToListAsync();
+            // Vu Ngoc Tuyen 2021050715
 
             // Tạo một đối tượng ExcelPackage
             using (var package = new ExcelPackage())
