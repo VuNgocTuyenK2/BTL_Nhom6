@@ -1,3 +1,4 @@
+// Quach Kieu Trang lam chuc nang dang nhap admin
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 namespace MVC.Models

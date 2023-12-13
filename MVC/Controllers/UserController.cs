@@ -1,3 +1,4 @@
+//Quach Kieu Trang sinh code tu dong va them sua phan admin
 using System;
 using System.Collections.Generic;
 using System.Linq;
