@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 namespace MVC.Models
 {
     [Table("Clothes")]
+    
 
     public class Clothes
     {
@@ -19,7 +20,7 @@ namespace MVC.Models
         public string? Color { get; set; }
         public int Status { get; set; }
     }
-    
+    //Nguyen Huy Tuong 2021050718
     public class ClothesViewModel
     {
         public int Id { get; set; }

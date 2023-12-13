@@ -19,6 +19,7 @@ namespace MVC.Controllers
         {
             _context = context;
         }
+        // Nguyen Huy Tuong 2021050718
 
         public IActionResult Create()
         {
@@ -49,6 +50,8 @@ namespace MVC.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        
+        // Nguyen Huy Tuong 2021050718
         public async Task<IActionResult> Details(int id)
         {
             if (id == 0 || _context.Clothes == null)
@@ -121,6 +124,8 @@ namespace MVC.Controllers
         /// <param name="searchModel"></param>
         /// <param name="page"></param>
         /// <returns></returns>
+        
+        //Nguyen Huy Tuong 2021050718
         public async Task<IActionResult> Index(ClothesViewModel searchModel, int? page)
         {
             if (searchModel.ClearFilter)
