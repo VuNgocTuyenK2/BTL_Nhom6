@@ -1,0 +1,134 @@
+@model X.PagedList.IPagedList<MVC.Models.ClothesViewModel>
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .pagination-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .pagination-container a {
+        display: inline-block;
+        padding: 8px 12px;
+        margin: 0 5px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .pagination-container a:hover {
+        background-color: #0056b3;
+    }
+
+    .pagination-container .pagedList-current {
+        font-weight: bold;
+        background-color: #0056b3;
+    }
+
+    .active span {
+        padding: 8px 12px;
+        margin: 0 5px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+</style>
+<div class="w3-container">
+    @using (Html.BeginForm("Index", "Clothes", FormMethod.Get))
+    {
+        <p>
+            <b>Tìm kiếm theo tên sản phẩm:</b> @Html.TextBox("ClothesName")
+            <br>
+            <br>
+            <br>
+            <b>Mã sản phẩm: </b>@Html.TextBox("ClothesID", null, new { style = "margin-left: 128px" })
+            <br>
+            <br>
+            <b>Trạng thái: </b>
+            <select style="width:130px;margin-left: 156px" name="Status" class="w3-select w3-border w3-border-blue w3-round">
+                <option value="0">Tất cả</option>
+                <option value="1">Đang bán</option>
+                <option value="2">Đã ngưng bán</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit" value="Tìm kiếm" class="btn btn-primary">Tìm Kiếm</button>
+            <button type="submit" onclick="clearFilters()" name="ClearFilter" value="true" class="btn btn-danger">Xoá bộ
+                lọc</button>
+            <a asp-action="ExportToExcel" class="btn btn-success">Xuất Excel</a>
+        </p>
+    }
+    <div class="w3-row">
+        <b>Danh sách sản phẩm</b>
+        <a asp-action="Create" class="w3-btn w3-border w3-border-blue w3-round w3-right w3-tiny w3-horver-blue">Thêm
+            mới</a>
+    </div>
+    <hr />
+    <table class="w3-table-all w3-card-4 w3-centered">
+        <thead>
+            <tr class="w3-blue">
+                <th class="w3-col l2">Mã sản phẩm</th>
+                <th class="w3-col l4">Tên sản phẩm</th>
+                <th class="w3-col l2">Số lượng</th>
+                <th class="w3-col l2">Màu sắc</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="w3-col l2">@item.ClothesID</td>
+                        <td class="w3-col l4">@item.ClothesName</td>
+                        <td class="w3-col l2">@item.Number</td>
+                        <td class="w3-col l2">@item.Color</td>
+
+                        <td class="w3-col l2">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="w3-button w3-green w3-circle w3-small"><i
+                                    class="fa fa-edit"></i></a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="w3-button w3-red w3-circle w3-small"><i
+                                    class="fa fa-trash"></i></a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="w3-button w3-pink w3-circle w3-small"><i
+                                    class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div class="pagination-container">
+        @Html.PagedListPager(
+                 Model,
+                 page => Url.Action("Index", new { page }),
+                 new X.PagedList.Web.Common.PagedListRenderOptions
+        {
+            DisplayLinkToFirstPage = X.PagedList.Web.Common.PagedListDisplayMode.IfNeeded,
+            DisplayLinkToLastPage = X.PagedList.Web.Common.PagedListDisplayMode.IfNeeded,
+            DisplayLinkToPreviousPage = X.PagedList.Web.Common.PagedListDisplayMode.IfNeeded,
+            DisplayLinkToNextPage = X.PagedList.Web.Common.PagedListDisplayMode.IfNeeded,
+            DisplayLinkToIndividualPages = true,
+            DisplayPageCountAndCurrentLocation = false,
+            MaximumPageNumbersToDisplay = 5,
+            LinkToFirstPageFormat = "&laquo;&laquo;",
+            LinkToPreviousPageFormat = "&laquo;",
+            LinkToIndividualPageFormat = "{0}",
+            LinkToNextPageFormat = "&raquo;",
+            LinkToLastPageFormat = "&raquo;&raquo;",
+            PageCountAndCurrentLocationFormat = "Page {0} of {1}.",
+        })
+
+    </div>
+</div>
+<script>
+    function clearFilters() {
+        document.getElementById('ClothesID').value = '';
+        document.getElementById('ClothesName').value = '';
+    }
+</script>

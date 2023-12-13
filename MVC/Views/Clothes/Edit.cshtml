@@ -1,0 +1,62 @@
+@model MVC.Models.Clothes
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Sửa thông tin sản phẩm</h1>
+<hr />
+<div class="max-width-40 ud-center">
+    <div class="w3-container w3-blue w3-round">
+        <h2 class="w3-center">Sửa thông tin</h2>
+    </div>
+    <form asp-action="Edit" class="w3-container w3-card-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col l8">
+                <label asp-for="ClothesID" class="control-label">Mã quần áo</label>:
+                <input asp-for="ClothesID" class="form-control" />
+                <span asp-validation-for="ClothesID" class="text-danger"></span>
+            </div>
+            <div class="w3-col l3 w3-right">
+                <label asp-for="ClothesName" class="control-label">Tên quần áo</label>:
+                <input asp-for="ClothesName" class="form-control" />
+                <span asp-validation-for="ClothesName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col l8">
+                <label asp-for="Number" class="control-label">Số lượng</label>:
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="w3-col l3 w3-right">
+                <label asp-for="Color" class="control-label">Màu sắc</label>
+                <select asp-for="Color" class="w3-select w3-border w3-border-blue w3-round">
+                    <option value="Lục">Lục</option>
+                    <option value="Lam">Lam</option>
+                    <option value="Chàm">Chàm</option>
+                    <option value="Tím">Tím</option>
+                    <option value="Đen">Đen</option>
+                    <option value="Hồng">Hồng</option>
+                    <option value="Xám">Xám</option>
+                </select>
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col l8">
+                <label asp-for="Status" class="control-label">Trạng thái</label>
+                <select asp-for="Status" class="w3-select w3-border w3-border-blue w3-round">
+                    <option value="0">Đang bán</option>
+                    <option value="1">Đã ngưng bán</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-row w3-margin-top w3-margin-bottom">
+            <a asp-action="Index" class="w3-btn w3-green w3-round">Quay lại</a>
+            <input type="submit" value="Đồng ý" class="w3-btn w3-blue w3-round w3-right" />
+        </div>
+    </form>
+</div>

@@ -1,0 +1,37 @@
+@model IEnumerable<MVC.Models.Clothes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="w3-container">
+    <div class="w3-row">
+    </div>
+    <hr />
+    <table class="w3-table-all w3-card-4 w3-centered">
+        <thead>
+            <tr class="w3-blue">
+                <th class="w3-col l4">Tổng số lượng sản phẩm</th>
+                <th class="w3-col l4">Tổng số sản phẩm đang bán</th>
+                <th class="w3-col l3">Tổng số sản phẩm đã ngưng bán</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="w3-col l4"><a href="@Url.Action("Index", "Clothes")">@ViewBag.Total</a></td>
+                <td class="w3-col l4"><a
+                        href="@Url.Action("Index", "Clothes", new { Status = 1, ClothesID = "", ClothesName = "" })">@ViewBag.TotalCart</a>
+                </td>
+                <td class="w3-col l3"><a
+                        href="@Url.Action("Index", "Clothes", new { Status = 2, ClothesID = "", ClothesName = "" })">@ViewBag.TotalCartStop</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function clearFilters() {
+        document.getElementById('NameSV').value = '';
+        document.getElementById('IdSV').value = '';
+    }
+</script>

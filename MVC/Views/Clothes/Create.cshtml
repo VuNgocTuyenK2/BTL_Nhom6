@@ -1,0 +1,60 @@
+@model MVC.Models.Clothes
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Thêm mới</h1>
+
+<hr />
+<div class="max-width-40 ud-center">
+    <div class="w3-container w3-teal">
+        <h2>Tạo sản phẩm mới</h2>
+    </div>
+    <form asp-action="Create" class="w3-container w3-card-4 w3-padding">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <label asp-for="ClothesID" class="control-label">Mã sản phẩm</label>
+                <input asp-for="ClothesID" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="ClothesID" class="text-danger"></span>
+            </div>
+            <div class="w3-col l8 w3-right">
+                <label asp-for="ClothesName" class="control-label">Tên sản phẩm</label>
+                <input asp-for="ClothesName" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="ClothesName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <label asp-for="Number" class="control-label">Số lượng</label>
+                <input asp-for="Number" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="w3-col l8 w3-right">
+                <label asp-for="Color" class="control-label">Chọn màu sắc</label>
+                <select asp-for="Color" class="w3-select w3-border w3-border-blue w3-round">
+                    <option value="">Chọn màu sắc</option> <!-- Lựa chọn mặc định -->
+                    <option value="Lục">Lục</option>
+                    <option value="Nam">Lam</option>
+                    <option value="Chàm">Chàm</option>
+                    <option value="Tím">Tím</option>
+                    <option value="Đen">Đen</option>
+                    <option value="Hồng">Hồng</option>
+                    <option value="Xám">Xám</option>
+                </select>
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-margin-top">
+            <a class="w3-btn w3-round w3-green w3-card-4" asp-action="Index">Quay lại</a>
+            <input type="submit" value="Tạo mới" class="w3-btn w3-blue w3-right w3-round w3-card-4" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

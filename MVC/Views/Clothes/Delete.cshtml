@@ -1,0 +1,74 @@
+@model MVC.Models.Clothes
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Xoá thông tin</h1>
+
+<div>
+    <hr />
+    <div class="max-width-40 ud-center">
+        <div class="w3-container w3-red w3-round">
+            <h2 class="w3-center">Bạn có đồng ý xoá sản phẩm này không?</h2>
+        </div>
+        <div class="w3-container w3-card-4">
+            <dl class="w3-row w3-margin-top">
+                <dt class="w3-col l2"> Mã sản phẩm</dt>
+                <dd class="w3-col l3">
+                    @Html.DisplayFor(model => model.ClothesID)
+                </dd>
+
+                <dd class="w3-col l2 w3-right">
+                    @Html.DisplayFor(model => model.ClothesName)
+                </dd>
+                <dt class="w3-col l2 w3-right">
+                    Tên sản phẩm
+                </dt>
+            </dl>
+            <dl class="w3-row">
+                <dt class="w3-col l2">
+                    Số lượng
+                </dt>
+                <dd class="w3-col l3">
+                    @Html.DisplayFor(model => model.Number)
+                </dd>
+
+                <dd class="w3-col l2 w3-right">
+                    @Html.DisplayFor(model => model.Color)
+                </dd>
+                <dt class="w3-col l2 w3-right">
+                    Màu sắc
+                </dt>
+            </dl>
+            <dl class="w3-row">
+                <dt class="w3-col l2">
+                    Tình trạng
+                </dt>
+                <dd class="w3-col l3">
+                    @if (Model.Status == 0)
+
+                    {
+                        <span style="color: green;">Đang bán</span>
+                    }
+
+                    else if (Model.Status == 1)
+
+                    {
+                        <span style="color: red;">Đã ngưng bán</span>
+                    }
+                </dd>
+            </dl>
+            <hr
+            <div class="w3-row">
+                <div class="w3-col l3">
+                    <a asp-action="Index" class="w3-btn w3-green w3-round w3-margin-bottom">Quay lại</a>
+                </div>
+                <div class="w3-right">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Đồng ý" class="w3-btn w3-red w3-round w3-margin-bottom" />
+                    </form>
+                </div>
+            </div>
+        </div>
