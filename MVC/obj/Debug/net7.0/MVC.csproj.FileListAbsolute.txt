@@ -3703,3 +3703,4 @@ D:\Project nhom6\BTL_Nhom6\MVC\obj\Debug\net7.0\refint\MVC.dll
 D:\Project nhom6\BTL_Nhom6\MVC\obj\Debug\net7.0\MVC.pdb
 D:\Project nhom6\BTL_Nhom6\MVC\obj\Debug\net7.0\MVC.genruntimeconfig.cache
 D:\Project nhom6\BTL_Nhom6\MVC\obj\Debug\net7.0\ref\MVC.dll
+D:\Project nhom6\BTL_Nhom6\MVC\obj\Debug\net7.0\MVC.sourcelink.json

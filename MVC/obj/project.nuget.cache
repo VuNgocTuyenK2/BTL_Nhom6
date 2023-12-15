@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OYAzkj64zw0oKang1Pbincdf0Bm7RUr55ovw/PjkZCLhTFjfV3g1HzDIQj/hzdQelXD00je2WISzvDPgT89ecA==",
+  "dgSpecHash": "PpCtrUcx9ZHeEiXw4e4lRjCvcyT0QVKqN4vCb1R+v7qFnNQJn2pClRgfMYPVKbBbXb5RviW6iTtGq8W/UmTtZA==",
   "success": true,
   "projectFilePath": "D:\\Project nhom6\\BTL_Nhom6\\MVC\\MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinh khanh\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\vinh khanh\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
-    "C:\\Users\\vinh khanh\\.nuget\\packages\\epplus\\7.0.2\\epplus.7.0.2.nupkg.sha512",
+    "C:\\Users\\vinh khanh\\.nuget\\packages\\epplus\\7.0.4\\epplus.7.0.4.nupkg.sha512",
     "C:\\Users\\vinh khanh\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\vinh khanh\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
     "C:\\Users\\vinh khanh\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -246,7 +246,11 @@
     "C:\\Users\\vinh khanh\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\vinh khanh\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\vinh khanh\\.nuget\\packages\\x.pagedlist\\8.4.7\\x.pagedlist.8.4.7.nupkg.sha512",
-    "C:\\Users\\vinh khanh\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.7\\x.pagedlist.mvc.core.8.4.7.nupkg.sha512"
+    "C:\\Users\\vinh khanh\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.7\\x.pagedlist.mvc.core.8.4.7.nupkg.sha512",
+    "C:\\Users\\vinh khanh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\vinh khanh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512",
+    "C:\\Users\\vinh khanh\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\vinh khanh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

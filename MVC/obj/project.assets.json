@@ -46,7 +46,7 @@
           }
         }
       },
-      "EPPlus/7.0.2": {
+      "EPPlus/7.0.4": {
         "type": "package",
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
@@ -4315,15 +4315,15 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "EPPlus/7.0.2": {
-      "sha512": "yr7KJeyYoXED/lKDqCaeCmPDndIeJ7X4A3ezXBrGE6nG/a0w+Qumo/Si/0JvQQip27ekw21DWWdNlq0hK6qpaw==",
+    "EPPlus/7.0.4": {
+      "sha512": "1m/1jdbK9LkRLb6DllmEFYoS/KqA2zaypmGwC+h4P13dW5IObJRzAjZ5VdgdA7fkKg9GUm2YXa8/JqMv5zYv3Q==",
       "type": "package",
-      "path": "epplus/7.0.2",
+      "path": "epplus/7.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "EPPlusLogo.png",
-        "epplus.7.0.2.nupkg.sha512",
+        "epplus.7.0.4.nupkg.sha512",
         "epplus.nuspec",
         "lib/net35/EPPlus.dll",
         "lib/net35/EPPlus.xml",
@@ -4333,6 +4333,8 @@
         "lib/net6.0/EPPlus.xml",
         "lib/net7.0/EPPlus.dll",
         "lib/net7.0/EPPlus.xml",
+        "lib/net8.0/EPPlus.dll",
+        "lib/net8.0/EPPlus.xml",
         "lib/netstandard2.0/EPPlus.dll",
         "lib/netstandard2.0/EPPlus.xml",
         "lib/netstandard2.1/EPPlus.dll",
@@ -12137,7 +12139,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "EPPlus >= 7.0.2",
+      "EPPlus >= 7.0.4",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SQLite >= 7.0.13",
@@ -12186,7 +12188,7 @@
         "dependencies": {
           "EPPlus": {
             "target": "Package",
-            "version": "[7.0.2, )"
+            "version": "[7.0.4, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -12232,6 +12234,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -12240,7 +12260,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
